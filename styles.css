@@ -1,3 +1,132 @@
+/* Chatbot styles */
+#chatbot-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 350px; /* Slightly wider for potential data visualizations */
+    border: 1px solid #ddd; /* Lighter border color */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa; /* Light gray background */
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+#chat-container {
+    height: 350px; /* Increased height for potential content */
+    overflow-y: scroll;
+    padding: 15px;
+}
+
+#initial-message {
+    color: #666; /* Darker text color */
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Inconsolata', monospace; /* Monospace font for a data-driven look */
+}
+
+.dark-mode #initial-message {
+    color: #ddd;
+}
+
+#messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.message {
+    margin-bottom: 15px; /* Increased spacing for readability */
+}
+
+.user-message {
+    text-align: right;
+    color: #333; /* Darker text color */
+}
+
+.bot-message {
+    text-align: left;
+    color: #007bff; /* Blue color (primary color) */
+}
+
+#user-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: 1px solid #ddd; /* Lighter border color */
+    border-radius: 5px;
+    margin: 10px 5px 10px 10px;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace; /* Monospace font */
+    color: #333; /* Darker text color */
+}
+
+#send-button {
+    width: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue color (primary color) */
+    color: white;
+    cursor: pointer;
+    margin: 10px 10px 10px 0;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+#close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: #ccc;
+    cursor: pointer;
+}
+
+#close-button:hover {
+    color: #333;
+}
+
+#chatbot-container * {
+    user-select: auto; /* Allow text selection for all chatbot elements */
+}
+
+#chat-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color (primary color) */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it is above other content */
+}
+
+#chat-button:hover {
+    background-color: #0056b3;
+}
+
+/* Dark mode styles */
+.dark-mode #chatbot-container {
+    background-color: #212529; /* Darker background color */
+    color: #ddd; /* Light text color */
+}
+
+.dark-mode .user-message {
+    color: #ffc107; /* Yellow color */
+}
+
+.dark-mode .bot-message {
+    color: #007bff; /* Blue color (primary color) */
+}
+
+
 /* Reset and general styling */
 * {
     box-sizing: border-box;
@@ -120,4 +249,35 @@ form button:hover {
 form button {
     cursor: pointer;
     padding: 0.75rem 1.5rem;
+}
+
+/* Footer styling */
+footer {
+    background-color: #171a29; /* Match background color from sections */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p { /* Style the copyright text */
+    margin-bottom: 1rem; /* Add some space below the copyright text */
+}
+
+.social-icons { /* Style the social icon container */
+    display: flex; /* Arrange icons horizontally */
+    justify-content: center; /* Center the icons within the container */
+}
+
+.social-icons a { /* Style the social media links */
+    margin: 0 1rem; /* Add spacing between icons */
+}
+
+.social-icons img { /* Style the social media icons */
+    width: 24px;
+    height: 24px; /* Adjust size of the icons */
+    transition: transform 0.3s ease; /* Add hover animation */
+}
+
+.social-icons img:hover { /* Style on hover */
+    transform: scale(1.1); /* Slightly scale up icons on hover */
 }

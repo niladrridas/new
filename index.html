@@ -229,10 +229,27 @@
         </div>
     </section>
 
+    <!-- Chatbot toggle button -->
+    <button id="chat-button">Speak to Chatbot</button>
+
+    <!-- Chatbot container -->
+    <div id="chatbot-container" class="hidden">
+        <!-- Close button -->
+        <button class="close-button" onclick="toggleChatbot()">X</button>
+        <div id="chat-container">
+            <div id="initial-message">
+                This chatbot response includes all the greetings, general knowledge, computer science, physics, mathematics, and personal information responses. You can ask questions on these topics to interact with the chatbot.
+            </div>
+            <ul id="messages"></ul>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message..." onkeydown="handleKeyDown(event)" onfocus="hideInitialMessage()">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact Me</h2>
-            <form action="submit_form.php" method="post">
+            <form action="https://usebasin.com/f/bec2e3c667f5" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
@@ -240,13 +257,21 @@
             </form>
         </div>
     </section>
-    
 
     <footer>
         <div class="container">
             <p>&copy; 2024 Niladri Das. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://github.com/niladrridas" target="_blank">
+                    <img src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/niladrridas/" target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn">
+                </a>
+            </div>
         </div>
     </footer>
+    
 
     <script src="scripts.js"></script>
 </body>
