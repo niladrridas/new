@@ -51,7 +51,7 @@
 }
 
 #user-input {
-    width: calc(100% - 60px);
+    width: calc(100% - 80px); /* Adjusted for button and icon width */
     padding: 10px;
     border: 1px solid #ddd; /* Lighter border color */
     border-radius: 5px;
@@ -62,18 +62,46 @@
 }
 
 #send-button {
-    width: 50px;
+    width: 70px; /* Adjusted width for button */
     padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: #007bff; /* Blue color (primary color) */
     color: white;
     cursor: pointer;
-    margin: 10px 10px 10px 0;
+    margin: 10px;
+    display: flex; /* Flex container for icon and text */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 #send-button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#send-button svg {
+    width: 20px; /* Adjust size of the icon */
+    height: 20px;
+    fill: white; /* Icon color */
+    margin-right: 5px; /* Spacing between icon and text */
+}
+
+#clear-history-button {
+    width: calc(100% - 20px); /* Adjusted width for button */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545; /* Red color for danger */
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    display: block; /* Display as block element */
+    clear: both; /* Clear float */
+    text-align: center;
+}
+
+#clear-history-button:hover {
+    background-color: #c82333; /* Darker shade on hover */
 }
 
 #close-button {
@@ -99,17 +127,29 @@
     position: fixed;
     bottom: 10px;
     right: 10px;
-    padding: 10px 20px;
+    padding: 10px;
     background-color: #007bff; /* Blue color (primary color) */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%; /* Rounded shape */
     cursor: pointer;
     z-index: 1001; /* Ensure it is above other content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Adjust width as needed */
+    height: 60px; /* Adjust height as needed */
 }
 
 #chat-button:hover {
     background-color: #0056b3;
+}
+
+#chat-button-icon {
+    width: 30px; /* Adjust size of the icon */
+    height: 30px;
+    fill: white; /* Icon color */
+    margin-right: 10px; /* Spacing between icon and text */
 }
 
 /* Dark mode styles */
@@ -125,7 +165,6 @@
 .dark-mode .bot-message {
     color: #007bff; /* Blue color (primary color) */
 }
-
 
 /* Reset and general styling */
 * {
