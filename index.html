@@ -2,79 +2,252 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Machine Learning Engineer Portfolio</title>
-                <link rel="stylesheet" href="styles.css">
-                </head>
-                <body>
-                    <header>
-                            <div class="container">
-                                        <h1>John Doe</h1>
-                                                    <nav>
-                                                                    <ul>
-                                                                                        <li><a href="#about">About</a></li>
-                                                                                                            <li><a href="#projects">Projects</a></li>
-                                                                                                                                <li><a href="#skills">Skills</a></li>
-                                                                                                                                                    <li><a href="#contact">Contact</a></li>
-                                                                                                                                                                    </ul>
-                                                                                                                                                                                </nav>
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                            </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Niladri Das</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-                                                                                                                                                                                                <section id="about" class="section">
-                                                                                                                                                                                                        <div class="container">
-                                                                                                                                                                                                                    <h2>About Me</h2>
-                                                                                                                                                                                                                                <p>I am a passionate Machine Learning Engineer with a background in computer science and a strong focus on applying machine learning techniques to solve real-world problems.</p>
-                                                                                                                                                                                                                                            <p>My goal is to leverage my skills in machine learning, deep learning, and data analysis to create innovative solutions.</p>
-                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                        </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate Machine Learning Engineer with a background in computer science and a strong focus on applying machine learning techniques to solve real-world problems.</p>
+            <p>My goal is to leverage my skills in machine learning, deep learning, and data analysis to create innovative solutions.</p>
+        </div>
+    </section>
 
-                                                                                                                                                                                                                                                            <section id="projects" class="section">
-                                                                                                                                                                                                                                                                    <div class="container">
-                                                                                                                                                                                                                                                                                <h2>Projects</h2>
-                                                                                                                                                                                                                                                                                            <div class="project">
-                                                                                                                                                                                                                                                                                                            <h3>Project 1: Predictive Maintenance using Machine Learning</h3>
-                                                                                                                                                                                                                                                                                                                            <p>A predictive maintenance system using LSTM networks to forecast equipment failures.</p>
-                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                    <div class="project">
-                                                                                                                                                                                                                                                                                                                                                                    <h3>Project 2: Image Classification with Convolutional Neural Networks</h3>
-                                                                                                                                                                                                                                                                                                                                                                                    <p>An image classification model using CNNs to classify images into different categories.</p>
-                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                                                                            </section>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1: Predictive Maintenance using Machine Learning</h3>
+                <p>A predictive maintenance system using LSTM networks to forecast equipment failures.</p>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                <section id="skills" class="section">
-                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="container">
-                                                                                                                                                                                                                                                                                                                                                                                                                                    <h2>Skills</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li>Python</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li>Machine Learning Algorithms</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li>Deep Learning (TensorFlow, PyTorch)</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li>Data Visualization (Matplotlib, Seaborn)</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li>SQL and NoSQL Databases</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li>Big Data Technologies (Hadoop, Spark)</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </section>
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/imageclassification" target="_blank">Project 2: Image Classification with Convolutional Neural Networks</a></h3>
+                <div id="readme" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/imageclassification/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            document.getElementById('readme').innerHTML = html;
+                        });
+                </script>
+                <p>An image classification model using CNNs to classify images into different categories.</p>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <section id="contact" class="section">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="container">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <h2>Contact Me</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <form action="submit_form.php" method="post">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <input type="text" name="name" placeholder="Your Name" required>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <input type="email" name="email" placeholder="Your Email" required>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <button type="submit">Send Message</button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </form>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </section>
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/movieml" target="_blank">Project 3: Movie Recommendation System</a></h3>
+                <div id="readme3" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/movieml/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            // Replace relative image paths with absolute paths
+                            html = html.replace(/src="assets\/images\/images\//g, 'src="https://raw.githubusercontent.com/niladrridas/movieml/main/assets/images/images/');
+                            document.getElementById('readme3').innerHTML = html;
+                        });
+                </script>
+                <p>A movie recommendation system using machine learning techniques.</p>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <footer>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="container">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p>&copy; 2024 John Doe. All rights reserved.</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </footer>
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/sentiment-analysis" target="_blank">Project 4: Sentiment Analysis</a></h3>
+                <div id="readme4" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/sentiment-analysis/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            // Replace relative image paths with absolute paths
+                            html = html.replace(/src=".\//g, 'src="https://raw.githubusercontent.com/niladrridas/sentiment-analysis/main/');
+                            document.getElementById('readme4').innerHTML = html;
+                        });
+                </script>
+                <p>A sentiment analysis system using machine learning techniques.</p>
+            </div>
+            
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/ml-loan-eligibility" target="_blank">Project 5: ML Loan Eligibility</a></h3>
+                <div id="readme5" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/ml-loan-eligibility/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            // Replace relative image paths with absolute paths
+                            html = html.replace(/src=".\//g, 'src="https://raw.githubusercontent.com/niladrridas/ml-loan-eligibility/main/');
+                            document.getElementById('readme5').innerHTML = html;
+                        });
+                </script>
+                <p>A machine learning system for predicting loan eligibility.</p>
+            </div>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <script src="scripts.js"></script>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </html>
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/deeplearning" target="_blank">Project 6: Deep Learning</a></h3>
+                <div id="readme6" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/deeplearning/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            // Replace relative image paths with absolute paths
+                            html = html.replace(/src="data\/Figure_1.png"/g, 'src="https://raw.githubusercontent.com/niladrridas/deeplearning/main/data/Figure_1.png"');
+                            // Add the image HTML at the end of the README HTML
+                            html += '<img src="https://raw.githubusercontent.com/niladrridas/deeplearning/main/data/Figure_1.png" alt="Figure 1">';
+                            document.getElementById('readme6').innerHTML = html;
+                        });
+                </script>
+                <p>A deep learning project.</p>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/voice-assistant-chatbot" target="_blank">Project 7: Voice Assistant Chatbot</a></h3>
+                <div id="readme7" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/voice-assistant-chatbot/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            // Replace relative image paths with absolute paths
+                            html = html.replace(/src=".\//g, 'src="https://raw.githubusercontent.com/niladrridas/voice-assistant-chatbot/main/');
+                            document.getElementById('readme7').innerHTML = html;
+                        });
+                </script>
+                <p>A voice assistant chatbot project.</p>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/facerecognition" target="_blank">Project 8: Face Recognition</a></h3>
+                <div id="readme9" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/facerecognition/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            // Replace relative image paths with absolute paths
+                            html = html.replace(/src="CV.webp"/g, 'src="https://raw.githubusercontent.com/niladrridas/facerecognition/main/CV.webp"');
+                            document.getElementById('readme9').innerHTML = html;
+                        });
+                </script>
+                <p>A face recognition project.</p>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/gan" target="_blank">Project 9: Generative Adversarial Networks (GAN)</a></h3>
+                <div id="readme-gan" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/gan/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            document.getElementById('readme-gan').innerHTML = html;
+                        });
+                </script>
+                <p>A project on Generative Adversarial Networks to generate new data from existing data.</p>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/dataanalysis" target="_blank">Project 10: Data Analysis</a></h3>
+                <div id="readme-dataanalysis" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/dataanalysis/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            document.getElementById('readme-dataanalysis').innerHTML = html;
+                        });
+                </script>
+                <p>A project on Data Analysis to analyze and visualize data.</p>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://github.com/niladrridas/chatbot" target="_blank">Project 11: Chatbot</a></h3>
+                <div id="readme-chatbot" style="border:1px solid black; padding: 10px; height: 500px; overflow-y: scroll;"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+                <script>
+                    fetch('https://raw.githubusercontent.com/niladrridas/chatbot/main/README.md')
+                        .then(response => response.text())
+                        .then(text => {
+                            var converter = new showdown.Converter(),
+                            html = converter.makeHtml(text);
+                            document.getElementById('readme-chatbot').innerHTML = html;
+                        });
+                </script>
+                <p>A project on building a Chatbot for customer service.</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Machine Learning Algorithms</li>
+                <li>Deep Learning (TensorFlow, PyTorch)</li>
+                <li>Data Visualization (Matplotlib, Seaborn)</li>
+                <li>SQL and NoSQL Databases</li>
+                <li>Big Data Technologies (Hadoop, Spark)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="submit_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Niladri Das. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

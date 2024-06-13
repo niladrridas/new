@@ -1,82 +1,123 @@
 /* Reset and general styling */
 * {
     box-sizing: border-box;
-        margin: 0;
-            padding: 0;
-            }
+    margin: 0;
+    padding: 0;
+}
 
-            body {
-                font-family: Arial, sans-serif;
-                    line-height: 1.6;
-                        background-color: #f5f5f5;
-                            color: #333;
-                            }
+/* Importing 'Inconsolata' font */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
 
-                            .container {
-                                max-width: 960px;
-                                    margin: 0 auto;
-                                        padding: 1rem;
-                                        }
+body {
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.6;
+    background-color: #171a29; /* Dark background */
+    color: #fff; /* White text */
+}
 
-                                        header {
-                                            background-color: #333;
-                                                color: #fff;
-                                                    padding: 1rem 0;
-                                                    }
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
-                                                    header h1 {
-                                                        margin: 0;
-                                                            font-size: 2rem;
-                                                            }
+/* Header with futuristic gradient and subtle animation */
+header {
+    background: linear-gradient(to right, #28303b, #434a54);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    animation: shine 2s infinite alternate ease-in-out;
+}
 
-                                                            nav ul {
-                                                                list-style-type: none;
-                                                                    padding: 0;
-                                                                    }
+@keyframes shine {
+    from {
+        background-position: 0% 0;
+    }
+    to {
+        background-position: 200% 0;
+    }
+}
 
-                                                                    nav ul li {
-                                                                        display: inline;
-                                                                            margin-right: 1rem;
-                                                                            }
+/* Navigation with subtle underline on hover and custom cursor */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-                                                                            nav ul li a {
-                                                                                text-decoration: none;
-                                                                                    color: #fff;
-                                                                                    }
+nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
 
-                                                                                    .section {
-                                                                                        padding: 4rem 0;
-                                                                                            background-color: #fff;
-                                                                                            }
+nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
 
-                                                                                            .project {
-                                                                                                margin-bottom: 2rem;
-                                                                                                }
+nav ul li a:hover {
+    color: #fff;
+    text-decoration: underline; /* Underline on hover */
+}
 
-                                                                                                form {
-                                                                                                    display: grid;
-                                                                                                        grid-gap: 1rem;
-                                                                                                        }
+.custom-cursor {
+    cursor: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"%3E%3Cpath d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8z M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z M5 8l3 3 3-3z" fill="#fff" stroke="none"%3E%3C/svg%3E') 10px 10px, auto;
+}
 
-                                                                                                        form input,
-                                                                                                        form textarea,
-                                                                                                        form button {
-                                                                                                            width: 100%;
-                                                                                                                padding: 1rem;
-                                                                                                                    font-size: 1rem;
-                                                                                                                        border: 1px solid #ccc;
-                                                                                                                        }
+/* Sections with subtle box-shadow and parallax scrolling */
+.section {
+    padding: 4rem 0;
+    background-color: #20232a; /* Slightly darker background for sections */
+    border-radius: 5px; /* Rounded corners for sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box-shadow */
+}
 
-                                                                                                                        form button {
-                                                                                                                            background-color: #333;
-                                                                                                                                color: #fff;
-                                                                                                                                    border: none;
-                                                                                                                                        cursor: pointer;
-                                                                                                                                        }
+.section-content {
+    animation: parallax 0.5s ease-in-out;
+}
 
-                                                                                                                                        footer {
-                                                                                                                                            background-color: #333;
-                                                                                                                                                color: #fff;
-                                                                                                                                                    text-align: center;
-                                                                                                                                                        padding: 1rem 0;
-                                                                                                                                                        }
+@keyframes parallax {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.project {
+    margin-bottom: 2rem;
+}
+
+/* Forms with a futuristic feel and hover animation */
+form {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none; /* Remove default border */
+    background-color: #28303b; /* Darker background for form elements */
+    color: #fff; /* White text for forms */
+    border-radius: 5px; /* Rounded corners for form elements */
+    transition: background-color 0.3s ease;
+}
+
+form input:hover,
+form textarea:hover,
+form button:hover {
+    background-color: #333; /* Darker background on hover */
+}
+
+form button {
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+}
