@@ -1,21 +1,27 @@
 // /api/contact.js
-const sgMail = require('@sendgrid/mail');
+const nodemailer = require('nodemailer');
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // replace with your email service
+  auth: {
+    user: process.env.EMAIL_USERNAME,
+    pass: process.env.EMAIL_PASSWORD
+  }
+});
 
 module.exports = async (req, res) => {
   const { name, email, message } = req.body;
 
-  const content = {
-    to: 'ndas1262000@gmail.com',
+  const mailOptions = {
     from: email,
+    to: 'ndas1262000@gmail.com',
     subject: `New Message From ${name}`,
     text: message,
     html: `<p>${message}</p>`
   };
 
   try {
-    await sgMail.send(content);
+    await transporter.sendMail(mailOptions);
     res.status(200).send('Message sent successfully');
   } catch (error) {
     console.log('ERROR', error);
